@@ -1,0 +1,21 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<class>
+<student rollno="393">
+<firstname>dinkar</firstname>
+<lastname>kad</lastname>
+<nickname>dinkar</nickname>
+<marks>85</marks>
+</student>
+<student rollno="493">
+<firstname>sruthi</firstname>
+<lastname>reddy</lastname>
+<nickname>sruthi</nickname>
+<marks>95</marks>
+</student>
+<student rollno="593">
+<firstname>phaneesha</firstname>
+<lastname>yadav</lastname>
+<nickname>phani</nickname>
+<marks>75</marks>
+</student>
+</class>

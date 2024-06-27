@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript onclick and onsubmit Events</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h2>JavaScript onclick and onsubmit Events</h2>
+
+<form id="myForm">
+    <label for="textInput">Enter something:</label>
+    <input type="text" id="textInput" name="textInput">
+    <button type="submit">Submit Form</button>
+</form>
+
+<script>
+    var form = document.getElementById('myForm');
+    
+    // Event listener for form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        
+        console.log('Form submitted!');
+        
+        // Additional processing (if needed)
+        var inputText = document.getElementById('textInput').value;
+        console.log('Input value:', inputText);
+    });
+</script>
+
+</body>
+</html>

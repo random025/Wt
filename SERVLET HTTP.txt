@@ -1,0 +1,111 @@
+HttpSessionEx2.java
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class HttpSessionEx2 extends HttpServlet {
+
+       protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            HttpSession sn=request.getSession();
+out.println("Your session id"+sn.getId());
+String name=(String)sn.getAttribute("studentName");
+String address=(String) sn.getAttribute("studentaddress");
+
+out.println("<br>");
+out.println("your name is "+name+"<br>");
+out.println("your address is "+address+"<br>");
+out.println("<A href=studentform.html>New Form</A>");
+        }
+    }
+}
+
+HttpSessionEx3.java
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class HttpSessionEx3 extends HttpServlet {
+
+        protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+                        HttpSession sn=request.getSession();
+out.println("Your session id"+sn.getId());
+String name=(String)sn.getAttribute("studentName");
+String address=(String) sn.getAttribute("studentaddress");
+
+out.println("<br>");
+out.println("your name is "+name+"<br>");
+out.println("your address is "+address+"<br>");
+out.println("<A href=studentform.html>New Form</A>");
+        }
+    }  
+}
+studentform.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Session Attributes</title>
+</head>
+<body>
+    <h2>Set Session Attributes</h2>
+    <form action="HttpSessionEx2" method="get">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <br><br>
+        <input type="submit" value="Set Session Attributes">
+    </form>
+</body>
+</html>
+
+web.xml are generated automatically
+
+output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

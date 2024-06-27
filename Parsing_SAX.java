@@ -1,0 +1,31 @@
+import java.io.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+
+public class Parsing_SAXDemo {
+
+  public static void main(String args[]) throws IOException {
+    try {
+      System.out.println("Enter the name of xml document");
+      BufferedReader input = new BufferedReader(
+        new InputStreamReader(System.in)
+      );
+      String file_name = input.readLine();
+      File fp = new File(file_name);
+      if (fp.exists()) {
+        try {
+          XMLReader reader = XMLReaderFactory.createXMLReader();
+          reader.parse(file_name);
+          System.out.println(file_name + "Well formed!");
+        } catch (Exception e) {
+          System.out.println(file_name + "is not well formed!");
+          System.exit(1);
+        }
+      } else {
+        System.out.println("file not found!");
+      }
+    } catch (Exception ex) {
+      System.out.println(ex);
+    }
+  }
+}

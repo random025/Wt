@@ -1,0 +1,8 @@
+<?xml version="1.0"?> 
+<!DOCTYPE note SYSTEM "emailDTD.dtd"> 
+<note> 
+<to>Ravi</to> 
+<from>Chythanya</from> 
+<heading>Message</heading>
+<body>Welcome to the XML with DTD</body> 
+</note> 

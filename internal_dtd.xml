@@ -1,0 +1,13 @@
+<!DOCTYPE note[
+    <!ELEMENT note (to, from, heading, body)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT heading (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+]>
+<note>
+    <to>Ravi</to>
+    <from>Chythanya</from>
+    <heading>Message</heading>
+    <body>Welcome to the XML with DTD</body>
+</note>

@@ -1,0 +1,19 @@
+<!DOCTYPE catalog [
+    <!ELEMENT catalog (book+)>
+    <!ELEMENT book (title, author, year)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+]>
+<catalog>
+    <book>
+        <title>XML Basics</title>
+        <author>John Doe</author>
+        <year>2023</year>
+    </book>
+    <book>
+        <title>Advanced XML</title>
+        <author>Jane Smith</author>
+        <year>2024</year>
+    </book>
+</catalog>
