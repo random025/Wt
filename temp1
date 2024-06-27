@@ -1,0 +1,22 @@
+<body bgcolor="green">
+<center>
+welcome to This Application<br><br>
+        <% 
+        String name=request.getParameter("ename");
+        String design=request.getParameter("edesig");
+        HttpSession sn=request.getSession();
+        out.println("Your session id is"+sn.getId());
+        sn.setAttribute("empName",name);
+        sn.setAttribute("empDesign",design);
+        String e_name=(String)sn.getAttribute("empName");
+        String e_design=(String)sn.getAttribute("empDesign");
+        out.println("Employee Name is\t"+e_name);
+        out.println("<br><br>");
+        out.println("Employee Designation is\t"+e_design);
+%>     
+
+<br><br><a href="empform.html">new form</a><br><br>
+Thank you for Visiting this application<br><br>
+have a nice day<br><br>
+Bye Bye
+</center></body>
