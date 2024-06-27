@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body bgcolor="cyan"><center>
+        <form action="HttpSessionEx.jsp">
+            Enter Employee Name:<input type="text" name="ename"><br><br>
+             Enter Employee Designation:<input type="text" name="edesig"><br><br>
+             <input type="submit" name="send">
+        </form></center>
+    </body>
+</html>
